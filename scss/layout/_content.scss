@@ -1,0 +1,98 @@
+#results {
+
+  @extend %center;
+  width: 75%;
+
+  //overflow: auto;
+
+   p {
+    @include mix(small){
+      font-size: 0.5rem;
+    }
+    @include mix(medium){
+      font-size: 1rem;
+    }
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $font-color;
+    font-family: $font;
+    font-size: $font-size;
+  }
+}
+
+img {
+    @include mix(small){
+      height: 10rem;
+
+    }
+    @include mix(medium){
+      height: 15rem;
+    }
+  width: 100%;
+
+}
+
+#comicList {
+  @include mix(small){
+    padding: 1rem;
+  }
+  @include mix(medium){
+    padding: 2rem;
+  }
+  padding: 2rem;
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 200rem;
+}
+
+
+div {
+  margin: 0 auto;
+
+  @include mix(small){
+    width: 50%;
+
+
+  }
+  @include mix(medium){
+    width: 25%;
+
+  }
+
+
+  p{
+    margin: 0;
+  }
+}
+
+nav ul {
+  margin-right: 1rem;
+  font-family: $font;
+  float: right;
+  padding: 0.5rem;
+  width:20%;
+  background: rgba(0,0,0,0.7);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: gold;
+}
+
+#navbar p {
+  @include mix(small){
+
+    display: none;
+  }
+  @include mix(medium){
+
+    display: flex;
+  }
+  @include mix(large){
+
+    display: flex;
+  }
+}
+

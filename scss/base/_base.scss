@@ -1,0 +1,48 @@
+body {
+  background-color: #e23636;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+
+}
+
+.comicItem {
+  @include mix(small){
+    height: 15rem;
+    width: 80%;
+    margin: 1rem;
+
+
+  }
+  @include mix(medium){
+    height: 25rem;
+    width: 25%;
+  }
+
+
+  background: gold;
+  margin: 2rem;
+  margin-bottom: 2rem;
+  width: 25%;
+  height: 20rem;
+
+}
+
+header {
+  @include mix(small){
+    height: 10rem;
+  }
+  @include mix(medium){
+    height: 20rem;
+  }
+  @include mix(large){
+    height: 30rem;
+  }
+  background: url('https://i.kinja-img.com/gawker-media/image/upload/s--z47HzOLz--/c_scale,f_auto,fl_progressive,q_80,w_800/d0fm2fcd0gq7isdrtocd.png') no-repeat;
+  background-size: 100%;
+  height: 30rem;
+  overflow: auto;
+
+}
+

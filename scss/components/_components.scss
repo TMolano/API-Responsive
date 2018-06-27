@@ -1,0 +1,63 @@
+#search {
+  width: 100%;
+  height: 100%;
+
+  input {
+
+    @include mix(small){
+      font-size: 0.625rem;
+    }
+    @include mix(medium){
+      font-size: 1rem;
+    }
+    @include mix(large){
+      font-size: 1.5rem;
+    }
+
+    width: 100%;
+    background: url("../../search-assets/search.png") no-repeat right;
+    background-size: 8%;
+    background-color: lightgray;
+    box-sizing: border-box;
+    border: none;
+
+
+
+  }
+}
+
+#searchLabel {
+  @include mix(small){
+
+    font-size: 6px;
+
+
+  }
+  @include mix(medium){
+
+    font-size: 14px;
+  }
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 50%;
+  padding: 0.2em;
+  background: gold;
+  color: $font-color;
+  font-family: $font;
+  font-size: 10px;
+}
+
+#searchButton {
+  @include mix(small){
+    font-size: 10px;
+
+  }
+  @include mix(medium){
+    font-size: 16px;
+  }
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  color: black;
+  background: gold;
+}

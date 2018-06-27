@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Fetching External Data</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body lang="en">
+<header>
+    <nav>
+        <ul id="navbar">
+            <li><p>Home</p></li>
+            <li><p>About</p></li>
+            <li><p>Contact</p></li>
+        </ul>
+        <button></button>
+
+    </nav>
+    <div>
+        <form id = "search-form">
+            <p id="searchLabel"><label for="search">Search for your favorite Comics</label></p>
+            <p id="search"><input type="text" id="searchbar" placeholder="ex: Gun Theory" autocomplete="off"></p>
+            <input id="searchButton" type="submit" value="Search">
+        </form>
+    </div>
+</header>
+
+<section id="results">
+    <h2 id="results-of-search"></h2>
+    <ul id="comicList">
+        <li>
+            <article>
+                <p></p>
+                <img src="#">
+            </article>
+        </li>
+        <!-- more comics -->
+    </ul>
+
+</section>
+
+<script src="js/api.js"></script>
+</body>
+
+</html>
