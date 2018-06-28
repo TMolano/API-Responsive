@@ -48,6 +48,7 @@
 }
 
 #searchButton {
+  @extend %button;
   @include mix(small){
     font-size: 10px;
 
@@ -55,9 +56,15 @@
   @include mix(medium){
     font-size: 16px;
   }
-  display: block;
-  margin: 0 auto;
+
   margin-top: 1rem;
-  color: black;
-  background: gold;
+
+}
+
+#load {
+  @extend %button;
+  margin-bottom: 1rem;
+  height: 2rem;
+  width: 7rem;
+  font-size: large;
 }

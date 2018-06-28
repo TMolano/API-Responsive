@@ -13,7 +13,7 @@ form.onsubmit = function (ev) {
 
     const filterValue = document.getElementById('searchbar').value.toUpperCase();
     const inputValue = document.getElementById('searchbar').value;
-    const url = `${api_endpoint}?titleStartsWith=${filterValue}&orderBy=issueNumber%2Ctitle&apikey=${key}`;
+    const url = `${api_endpoint}?titleStartsWith=${filterValue}&limit=40&orderBy=issueNumber%2Ctitle&apikey=${key}`;
 
     fetch(url)
 
@@ -23,7 +23,8 @@ form.onsubmit = function (ev) {
             //Insert API data
             let newContent = '';
             console.log(resultsJSON.data.results);
-            for(let i = 0; i < resultsJSON.data.results.length; i++)
+
+            for(let i = 0; i < 20; i++)
             {
                 newContent += '<li class="comicItem"><article>'+ '<img src="' + resultsJSON.data.results[i].thumbnail.path + '.jpg"' + ' alt="image of comic art">';
                 newContent += '<p>' + resultsJSON.data.results[i].title + '</p></article></li>';
@@ -35,9 +36,10 @@ form.onsubmit = function (ev) {
 
             let li = document.querySelectorAll('.comicItem');
 
+
             function inputResults() {
                 let resultsHeader = document.getElementById('results-of-search');
-                resultsHeader.innerHTML = li.length + " Results for \"" + inputValue + "\"";
+                resultsHeader.innerHTML = resultsJSON.data.results.length + " Results for \"" + inputValue + "\"";
 
                 let body = document.getElementById("body");
                 body.style.overflowY = "visible";
@@ -69,3 +71,38 @@ else {
             console.log('An Error Occurred:', error)
         });
 };
+
+let load = document.getElementById("load");
+
+load.addEventListener("click", function () {
+
+    load.style.display = "none";
+
+        const filterValue = document.getElementById('searchbar').value.toUpperCase();
+        const inputValue = document.getElementById('searchbar').value;
+        const url = `${api_endpoint}?titleStartsWith=${filterValue}&limit=40&orderBy=issueNumber%2Ctitle&apikey=${key}`;
+
+        fetch(url)
+
+            .then(results => results.json())
+
+            .then(resultsJSON => {
+                //Insert API data
+                let newContent = '';
+                console.log(resultsJSON.data.results);
+
+                for (let i = 21; i < 40; i++) {
+                    newContent += '<li class="comicItem"><article>' + '<img src="' + resultsJSON.data.results[i].thumbnail.path + '.jpg"' + ' alt="image of comic art">';
+                    newContent += '<p>' + resultsJSON.data.results[i].title + '</p></article></li>';
+                }
+                let apiResults = document.querySelector('ul#comicList');
+                apiResults.insertAdjacentHTML("beforeend", newContent);
+
+                document.getElementById("comicList").style.height = "fit-content";
+
+            })
+
+            .catch(error => {
+                console.log('An Error Occurred:', error)
+            });
+});

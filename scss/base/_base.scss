@@ -4,8 +4,14 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  overflow-y: hidden;
+  
+  
 
+}
+
+html {
+  margin: 0;
+  padding: 0;
 }
 
 .comicItem {
@@ -22,6 +28,7 @@ body {
   background: gold;
   height: 25rem;
   margin: 1rem;
+
 
 
 }
@@ -41,6 +48,8 @@ header {
   height: 55rem;
   overflow: auto;
   transition: linear 1s 1s;
+  
+
 
 }
 
@@ -52,4 +61,17 @@ header {
   width: 10%;
   margin-left: 5%;
 
+}
+
+footer{
+  background: black;
+  color: gold;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  p{
+    display: inline-block;
+
+  }
 }

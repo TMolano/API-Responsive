@@ -1,5 +1,4 @@
 #results {
-
   @extend %center;
   width: 75%;
 
@@ -40,15 +39,14 @@ img {
   @include mix(medium){
 
   }
-
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   height: 200rem;
   width: 90%;
   margin: 0 auto;
   padding: 0;
-
 
 }
 
