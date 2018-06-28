@@ -4,45 +4,52 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
+  overflow-y: hidden;
 
 }
 
 .comicItem {
   @include mix(small){
-    height: 15rem;
-    width: 80%;
-    margin: 1rem;
+
 
 
   }
   @include mix(medium){
-    height: 25rem;
-    width: 25%;
+
   }
 
-
+  width: 30%;
   background: gold;
-  margin: 2rem;
-  margin-bottom: 2rem;
-  width: 25%;
-  height: 20rem;
+  height: 25rem;
+  margin: 1rem;
+
 
 }
 
 header {
   @include mix(small){
-    height: 10rem;
+
   }
   @include mix(medium){
-    height: 20rem;
+
   }
   @include mix(large){
-    height: 30rem;
+
   }
   background: url('https://i.kinja-img.com/gawker-media/image/upload/s--z47HzOLz--/c_scale,f_auto,fl_progressive,q_80,w_800/d0fm2fcd0gq7isdrtocd.png') no-repeat;
   background-size: 100%;
-  height: 30rem;
+  height: 55rem;
   overflow: auto;
+  transition: linear 1s 1s;
 
 }
 
+#logo {
+  background: url(http://thetechnews.com/wp-content/uploads/2018/03/x2_The-latest-Marvel-logo.jpg.pagespeed.ic.wAxY5I9Npl.jpg) no-repeat;
+ height: 5rem;
+  float: left;
+  background-size: 100%;
+  width: 10%;
+  margin-left: 5%;
+
+}

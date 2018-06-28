@@ -66,28 +66,17 @@
         font-size: 1rem; } }
 
 img {
+  height: 20rem;
   width: 100%; }
-  @media (min-width: 320px) {
-    img {
-      height: 10rem; } }
-  @media (min-width: 768px) {
-    img {
-      height: 15rem; } }
 
 #comicList {
-  padding: 2rem;
   list-style: none;
-  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  height: 200rem; }
-  @media (min-width: 320px) {
-    #comicList {
-      padding: 1rem; } }
-  @media (min-width: 768px) {
-    #comicList {
-      padding: 2rem; } }
+  height: 200rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0; }
 
 div {
   margin: 0 auto; }
@@ -129,35 +118,26 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  max-width: 100%; }
+  max-width: 100%;
+  overflow-y: hidden; }
 
 .comicItem {
+  width: 30%;
   background: gold;
-  margin: 2rem;
-  margin-bottom: 2rem;
-  width: 25%;
-  height: 20rem; }
-  @media (min-width: 320px) {
-    .comicItem {
-      height: 15rem;
-      width: 80%;
-      margin: 1rem; } }
-  @media (min-width: 768px) {
-    .comicItem {
-      height: 25rem;
-      width: 25%; } }
+  height: 25rem;
+  margin: 1rem; }
 
 header {
   background: url("https://i.kinja-img.com/gawker-media/image/upload/s--z47HzOLz--/c_scale,f_auto,fl_progressive,q_80,w_800/d0fm2fcd0gq7isdrtocd.png") no-repeat;
   background-size: 100%;
-  height: 30rem;
-  overflow: auto; }
-  @media (min-width: 320px) {
-    header {
-      height: 10rem; } }
-  @media (min-width: 768px) {
-    header {
-      height: 20rem; } }
-  @media (min-width: 1200px) {
-    header {
-      height: 30rem; } }
+  height: 55rem;
+  overflow: auto;
+  transition: linear 1s 1s; }
+
+#logo {
+  background: url(http://thetechnews.com/wp-content/uploads/2018/03/x2_The-latest-Marvel-logo.jpg.pagespeed.ic.wAxY5I9Npl.jpg) no-repeat;
+  height: 5rem;
+  float: left;
+  background-size: 100%;
+  width: 10%;
+  margin-left: 5%; }

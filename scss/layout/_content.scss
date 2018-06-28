@@ -3,7 +3,7 @@
   @extend %center;
   width: 75%;
 
-  //overflow: auto;
+
 
    p {
     @include mix(small){
@@ -22,30 +22,34 @@
 
 img {
     @include mix(small){
-      height: 10rem;
+
 
     }
     @include mix(medium){
-      height: 15rem;
+
     }
+  height: 20rem;
   width: 100%;
 
 }
 
 #comicList {
   @include mix(small){
-    padding: 1rem;
+
   }
   @include mix(medium){
-    padding: 2rem;
+
   }
-  padding: 2rem;
+
   list-style: none;
-  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   height: 200rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+
+
 }
 
 

@@ -13,7 +13,6 @@ form.onsubmit = function (ev) {
 
     const filterValue = document.getElementById('searchbar').value.toUpperCase();
     const inputValue = document.getElementById('searchbar').value;
-
     const url = `${api_endpoint}?titleStartsWith=${filterValue}&orderBy=issueNumber%2Ctitle&apikey=${key}`;
 
     fetch(url)
@@ -24,12 +23,12 @@ form.onsubmit = function (ev) {
             //Insert API data
             let newContent = '';
             console.log(resultsJSON.data.results);
-            for(var i = 0; i < resultsJSON.data.results.length; i++)
+            for(let i = 0; i < resultsJSON.data.results.length; i++)
             {
-                newContent += '<li class="comicItem"><article>'+ '<img src="' + resultsJSON.data.results[i].thumbnail.path + '.jpg' + 'alt=image of comic art">';
+                newContent += '<li class="comicItem"><article>'+ '<img src="' + resultsJSON.data.results[i].thumbnail.path + '.jpg"' + ' alt="image of comic art">';
                 newContent += '<p>' + resultsJSON.data.results[i].title + '</p></article></li>';
             }
-            var apiResults = document.querySelector('ul#comicList');
+            let apiResults = document.querySelector('ul#comicList');
             apiResults.innerHTML = newContent;
 
             let ul = document.getElementById('comicList');
@@ -37,8 +36,16 @@ form.onsubmit = function (ev) {
             let li = document.querySelectorAll('.comicItem');
 
             function inputResults() {
-                var resultsHeader = document.getElementById('results-of-search');
+                let resultsHeader = document.getElementById('results-of-search');
                 resultsHeader.innerHTML = li.length + " Results for \"" + inputValue + "\"";
+
+                let body = document.getElementById("body");
+                body.style.overflowY = "visible";
+
+                let header = document.getElementById("header");
+                header.style.height = "25rem";
+
+
             }
 
     for(let i = 0; i < li.length;i++){
@@ -61,4 +68,4 @@ else {
         .catch( error => {
             console.log('An Error Occurred:', error)
         });
-}
+};
