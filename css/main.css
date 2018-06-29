@@ -12,7 +12,7 @@
   height: 100%; }
   #search input {
     width: 100%;
-    background: url("../../search-assets/search.png") no-repeat right;
+    background: url("/search-assets/search.png") no-repeat right;
     background-size: 8%;
     background-color: lightgray;
     box-sizing: border-box;
@@ -34,7 +34,7 @@
   padding: 0.2em;
   background: gold;
   color: black;
-  font-family: Arial Rounded MT Bold, Times, serif;
+  font-family: "Arial Rounded MT Bold", Times, serif;
   font-size: 10px; }
   @media (min-width: 320px) {
     #searchLabel {
@@ -56,7 +56,8 @@
   margin-bottom: 1rem;
   height: 2rem;
   width: 7rem;
-  font-size: large; }
+  font-size: large;
+  display: none; }
 
 #results {
   width: 75%; }
@@ -64,7 +65,7 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     color: black;
-    font-family: Arial Rounded MT Bold, Times, serif;
+    font-family: "Arial Rounded MT Bold", Times, serif;
     font-size: 14px; }
     @media (min-width: 320px) {
       #results p {
@@ -82,12 +83,13 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  height: 200rem;
+  height: fit-content;
   width: 90%;
   margin: 0 auto;
   padding: 0; }
 
 div {
+  clear: both;
   margin: 0 auto; }
   @media (min-width: 320px) {
     div {
@@ -98,36 +100,39 @@ div {
   div p {
     margin: 0; }
 
-nav ul {
-  margin-right: 1rem;
-  font-family: Arial Rounded MT Bold, Times, serif;
-  float: right;
-  padding: 0.5rem;
-  width: 20%;
-  background: rgba(0, 0, 0, 0.7);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  color: gold; }
-
-@media (min-width: 320px) {
-  #navbar p {
-    display: none; } }
-
-@media (min-width: 768px) {
-  #navbar p {
-    display: flex; } }
-
-@media (min-width: 1200px) {
-  #navbar p {
-    display: flex; } }
+nav {
+  overflow: auto; }
+  nav ul {
+    margin-right: 1rem;
+    font-family: "Arial Rounded MT Bold", Times, serif;
+    padding: 0.5rem;
+    width: 20%;
+    background: rgba(0, 0, 0, 0.7);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    float: right; }
+    nav ul a {
+      text-decoration: none;
+      color: gold; }
+      @media (min-width: 320px) {
+        nav ul a {
+          display: none; } }
+      @media (min-width: 768px) {
+        nav ul a {
+          display: flex; } }
+      @media (min-width: 1200px) {
+        nav ul a {
+          display: flex; } }
 
 body {
   background-color: #e23636;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  max-width: 100%; }
+  max-width: 100%;
+  list-style: none; }
 
 html {
   margin: 0;
@@ -147,7 +152,7 @@ header {
   transition: linear 1s 1s; }
 
 #logo {
-  background: url(http://thetechnews.com/wp-content/uploads/2018/03/x2_The-latest-Marvel-logo.jpg.pagespeed.ic.wAxY5I9Npl.jpg) no-repeat;
+  background: url("/search-assets/marvel_logo.jpg") no-repeat;
   height: 5rem;
   float: left;
   background-size: 100%;
@@ -162,3 +167,7 @@ footer {
   margin: 0; }
   footer p {
     display: inline-block; }
+
+a {
+  text-decoration: none;
+  color: gold; }

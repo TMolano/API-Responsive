@@ -43,7 +43,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  height: 200rem;
+  height: fit-content;
   width: 90%;
   margin: 0 auto;
   padding: 0;
@@ -52,6 +52,7 @@ img {
 
 
 div {
+  clear: both;
   margin: 0 auto;
 
   @include mix(small){
@@ -70,31 +71,40 @@ div {
   }
 }
 
-nav ul {
-  margin-right: 1rem;
-  font-family: $font;
-  float: right;
-  padding: 0.5rem;
-  width:20%;
-  background: rgba(0,0,0,0.7);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  color: gold;
-}
+nav {
+overflow: auto;
 
-#navbar p {
-  @include mix(small){
-
-    display: none;
-  }
-  @include mix(medium){
-
+  ul {
+    margin-right: 1rem;
+    font-family: $font;
+    padding: 0.5rem;
+    width: 20%;
+    background: rgba(0, 0, 0, 0.7);
+    list-style: none;
     display: flex;
-  }
-  @include mix(large){
+    justify-content: space-between;
+    align-content: flex-end;
+    float: right;
 
-    display: flex;
+    a {
+      @include mix(small) {
+
+        display: none;
+      }
+      @include mix(medium) {
+
+        display: flex;
+      }
+      @include mix(large) {
+
+        display: flex;
+      }
+      text-decoration: none;
+      color: gold;
+
+    }
+
   }
+
 }
 
