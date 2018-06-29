@@ -3,40 +3,17 @@
   height: 100%;
 
   input {
-
-    @include mix(small){
-      font-size: 0.625rem;
-    }
-    @include mix(medium){
-      font-size: 1rem;
-    }
-    @include mix(large){
-      font-size: 1.5rem;
-    }
-
+    font-size: 1.5rem;
     width: 100%;
     background: url("../search-assets/search.png") no-repeat right;
     background-size: 8%;
     background-color: lightgray;
     box-sizing: border-box;
     border: none;
-
-
-
   }
 }
 
 #searchLabel {
-  @include mix(small){
-
-    font-size: 6px;
-
-
-  }
-  @include mix(medium){
-
-    font-size: 14px;
-  }
   display: inline-block;
   box-sizing: border-box;
   margin-top: 50%;
@@ -44,20 +21,19 @@
   background: gold;
   color: $font-color;
   font-family: $font;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 
 #searchButton {
   @extend %button;
-  @include mix(small){
-    font-size: 10px;
-
-  }
-  @include mix(medium){
-    font-size: 16px;
-  }
-
+  font-size: 1rem;
   margin-top: 1rem;
+  transition: ease-in 0.50s;
+
+
+  &:hover {
+    @extend %button-effect;
+  }
 
 }
 
@@ -68,4 +44,9 @@
   width: 7rem;
   font-size: large;
   display: none;
+  transition: ease-in 0.50s;
+
+  &:hover {
+    @extend %button-effect;
+  }
 }

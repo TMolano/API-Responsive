@@ -1,16 +1,7 @@
 #results {
-  @extend %center;
+  margin: $margin;
   width: 75%;
-
-
-
    p {
-    @include mix(small){
-      font-size: 0.5rem;
-    }
-    @include mix(medium){
-      font-size: 1rem;
-    }
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     color: $font-color;
@@ -20,51 +11,25 @@
 }
 
 img {
-    @include mix(small){
-
-
-    }
-    @include mix(medium){
-
-    }
   height: 20rem;
   width: 100%;
-
 }
 
 #comicList {
-  @include mix(small){
-
-  }
-  @include mix(medium){
-
-  }
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  height: fit-content;
   width: 90%;
-  margin: 0 auto;
+  margin: $margin;
   padding: 0;
-
 }
 
 
 div {
   clear: both;
-  margin: 0 auto;
-
-  @include mix(small){
-    width: 50%;
-
-
-  }
-  @include mix(medium){
-    width: 25%;
-
-  }
-
+  margin: $margin;
+  width: 25%;
 
   p{
     margin: 0;
@@ -80,27 +45,16 @@ overflow: auto;
     padding: 0.5rem;
     width: 20%;
     background: rgba(0, 0, 0, 0.7);
-    list-style: none;
     display: flex;
+    list-style: none;
     justify-content: space-between;
     align-content: flex-end;
     float: right;
 
     a {
-      @include mix(small) {
-
-        display: none;
-      }
-      @include mix(medium) {
-
-        display: flex;
-      }
-      @include mix(large) {
-
-        display: flex;
-      }
       text-decoration: none;
-      color: gold;
+      color: $font-color;
+      display: flex;
 
     }
 

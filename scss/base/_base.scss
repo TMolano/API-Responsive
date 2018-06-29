@@ -4,11 +4,6 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  list-style: none;
-
-
-  
-
 }
 
 html {
@@ -17,42 +12,18 @@ html {
 }
 
 .comicItem {
-  @include mix(small){
-
-
-
-  }
-  @include mix(medium){
-
-  }
-
   width: 30%;
   background: gold;
   height: 25rem;
   margin: 1rem;
-
-
-
 }
 
 header {
-  @include mix(small){
-
-  }
-  @include mix(medium){
-
-  }
-  @include mix(large){
-
-  }
   background: url("../search-assets/header.png") no-repeat;
   background-size: 100%;
   height: 55rem;
   overflow: auto;
   transition: linear 1s 1s;
-  
-
-
 }
 
 #logo {
@@ -67,18 +38,17 @@ header {
 
 footer{
   background: black;
-  color: gold;
+  color: $font-color;
   text-align: center;
   padding: 0;
   margin: 0;
 
   p{
     display: inline-block;
-
   }
 }
 
 a {
   text-decoration: none;
-  color: gold;
+  color: $font-size;
 }
