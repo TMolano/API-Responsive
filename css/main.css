@@ -12,7 +12,7 @@
   height: 100%; }
   #search input {
     width: 100%;
-    background: url("/search-assets/search.png") no-repeat right;
+    background: url("../search-assets/search.png") no-repeat right;
     background-size: 8%;
     background-color: lightgray;
     box-sizing: border-box;
@@ -145,14 +145,14 @@ html {
   margin: 1rem; }
 
 header {
-  background: url("https://i.kinja-img.com/gawker-media/image/upload/s--z47HzOLz--/c_scale,f_auto,fl_progressive,q_80,w_800/d0fm2fcd0gq7isdrtocd.png") no-repeat;
+  background: url("../search-assets/header.png") no-repeat;
   background-size: 100%;
   height: 55rem;
   overflow: auto;
   transition: linear 1s 1s; }
 
 #logo {
-  background: url("/search-assets/marvel_logo.jpg") no-repeat;
+  background: url("../search-assets/marvel_logo.jpg") no-repeat;
   height: 5rem;
   float: left;
   background-size: 100%;
