@@ -1,14 +1,9 @@
-
-@mixin mix($height) {
-  @if $height == small {
-    @media (min-width: 320px) {@content;}
-  }
-  @else if $height == medium {
-    @media (min-width: 768px) {@content;}
-  }
-    @else if $height == large {
-    @media (min-width: 1200px) {@content;}
-  }
-
+//similiar attributes for content elements
+@mixin content($display, $align-content, $width, $padding, $list-style){
+  display: $display;
+  align-content: $align-content;
+  width: $width;
+  padding: $padding;
+  list-style: $list-style;
 }
 

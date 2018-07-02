@@ -1,3 +1,5 @@
+//HTML global elements
+
 body {
   background-color: #e23636;
   box-sizing: border-box;
@@ -6,11 +8,7 @@ body {
   max-width: 100%;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
+//Each list item in comicList ul
 .comicItem {
   width: 30%;
   background: gold;
@@ -28,17 +26,17 @@ header {
 
 #logo {
   background: url("../search-assets/marvel_logo.jpg") no-repeat;
- height: 5rem;
+  height: 5rem;
   float: left;
   background-size: 100%;
   width: 10%;
-  margin-left: 5%;
+  margin: 1%;
 
 }
 
 footer{
   background: black;
-  color: $font-color;
+  color: gold;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -50,5 +48,5 @@ footer{
 
 a {
   text-decoration: none;
-  color: $font-size;
+  color: gold;
 }

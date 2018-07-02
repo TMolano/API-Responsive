@@ -1,3 +1,4 @@
+//container for comicList
 #results {
   margin: $margin;
   width: 75%;
@@ -15,14 +16,11 @@ img {
   width: 100%;
 }
 
+//list of comics from API
 #comicList {
-  list-style: none;
-  display: flex;
+  @include content(flex, flex-start, 95%, 0, none);
   flex-wrap: wrap;
-  align-content: flex-start;
-  width: 90%;
   margin: $margin;
-  padding: 0;
 }
 
 
@@ -40,22 +38,15 @@ nav {
 overflow: auto;
 
   ul {
+    @include content(flex, flex-end, 20%, 0.5rem, none);
     margin-right: 1rem;
     font-family: $font;
-    padding: 0.5rem;
-    width: 20%;
     background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    list-style: none;
     justify-content: space-between;
-    align-content: flex-end;
     float: right;
 
     a {
       text-decoration: none;
-      color: $font-color;
-      display: flex;
-
     }
 
   }
