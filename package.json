@@ -1,5 +1,5 @@
 {
-  "name": "api-search",
+  "name": "api-responsive",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TMolano/API-Search.git"
+    "url": "git+https://github.com/TMolano/API-Responsive.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TMolano/API-Search/issues"
+    "url": "https://github.com/TMolano/API-Responsive/issues"
   },
-  "homepage": "https://github.com/TMolano/API-Search#readme",
+  "homepage": "https://github.com/TMolano/API-Responsive#readme",
   "devDependencies": {
     "gulp": "^3.9.1"
   }
