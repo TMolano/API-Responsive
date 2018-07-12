@@ -1,12 +1,14 @@
-# API-Search
+# API-Responsive
 
-## API PROJECT TREVOR MOLANO
+## API PROJECT TREVOR MOLANO WEEK 2
 
 This is a filtering site for a set of data from developer.marvel.com.
 It has some transitions, simple validation, and a show more ability.
 Content is filtered by a custom API query.
 
-[Git-Pages](https://tmolano.github.io/API-Search/)
+This is an extension of the previous REPO, focusing on responsiveness.
+
+[REPO](https://tmolano.github.io/API-Responsive/)
 
 How to run Locally
 
