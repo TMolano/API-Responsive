@@ -58,13 +58,13 @@ img {
   width: 100%; }
 
 #comicList {
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
   align-content: flex-start;
   width: 95%;
-  margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0 auto; }
 
 div {
   clear: both;
@@ -76,15 +76,15 @@ div {
 nav {
   overflow: auto; }
   nav ul {
+    display: flex;
+    align-content: flex-end;
+    width: 20%;
+    padding: 0.5rem;
+    list-style: none;
     margin-right: 1rem;
     font-family: "Arial Rounded MT Bold", Arial, serif;
-    padding: 0.5rem;
-    width: 20%;
     background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    list-style: none;
     justify-content: space-between;
-    align-content: flex-end;
     float: right; }
     nav ul a {
       text-decoration: none; }
