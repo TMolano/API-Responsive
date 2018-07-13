@@ -1,17 +1,33 @@
 const key = "57acb95e5d18bf2ef168007fd66dd5ce";
 const api_endpoint = "https://gateway.marvel.com/v1/public/comics";
 
+if(!localStorage.getItem('searchValue')) {
+    populateStorage();
+} else {
+    setStyles();
+}
+
+function setStyles() {
+    const searchInput = localStorage.getItem('searchValue');
+
+    document.getElementById('searchbar').value = searchInput;
+    searchQuery();
+
+}
+
+function populateStorage() {
+    localStorage.setItem('searchValue', document.getElementById('searchbar').value);
+    setStyles();
+}
+
+
 //Fetch API data
 //Filter Comics based off Search Input
-
-const form = document.getElementById("search-form");
-form.onsubmit = function (ev) {
-    ev.preventDefault();
+function searchQuery() {
 
     const filterValue = document.getElementById("searchbar").value.toUpperCase();
     const inputValue = document.getElementById("searchbar").value;
     const url = `${api_endpoint}?titleStartsWith=${filterValue}&limit=40&orderBy=issueNumber%2Ctitle&apikey=${key}`;
-
     fetch(url)
 
         .then(results => results.json())
@@ -21,14 +37,14 @@ form.onsubmit = function (ev) {
             let newContent = "";
             console.log(resultsJSON.data.results);
 
-            if(resultsJSON.data.results.length > 20) {
+            if (resultsJSON.data.results.length > 20) {
                 load.style.display = "block";
                 for (let i = 0; i < 20; i++) {
                     newContent += '<li class="comicItem"><article>' + '<img src="' + resultsJSON.data.results[i].thumbnail.path + '.jpg"' + ' alt="image of comic art">';
                     newContent += '<h3>' + resultsJSON.data.results[i].title + '</h3></article></li>';
                 }
             }
-            else if(resultsJSON.data.results.length <= 20 && resultsJSON.data.results.length > 0) {
+            else if (resultsJSON.data.results.length <= 20 && resultsJSON.data.results.length > 0) {
                 load.style.display = "none";
                 for (let i = 0; i < resultsJSON.data.results.length; i++) {
                     newContent += '<li class="comicItem"><article>' + '<img src="' + resultsJSON.data.results[i].thumbnail.path + '.jpg"' + ' alt="image of comic art">';
@@ -53,10 +69,10 @@ form.onsubmit = function (ev) {
             }
 
             let li = document.querySelectorAll(".comicItem");
-            for(let i = 0; i < li.length;i++){
+            for (let i = 0; i < li.length; i++) {
 
-                let a = li[i].getElementsByTagName("p")[0];
-                if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                let a = li[i].getElementsByTagName("h3")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
                     li[i].style.display = "";
                 }
 
@@ -69,11 +85,18 @@ form.onsubmit = function (ev) {
             inputResults();
         })
 
-        .catch( error => {
+        .catch(error => {
             console.log("An Error Occurred:", error);
             alert("Items not available, try again")
         });
-};
+}
+    const form = document.getElementById("search-form");
+    form.onsubmit = function (ev) {
+        ev.preventDefault();
+        populateStorage();
+        searchQuery();
+    };
+
 
 const load = document.getElementById("load");
 
@@ -108,3 +131,7 @@ load.addEventListener("click", function () {
             console.log("An Error Occurred:", error)
         });
 });
+
+
+
+
