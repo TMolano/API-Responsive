@@ -7,3 +7,14 @@
   list-style: $list-style;
 }
 
+@mixin nav($displayNav){
+  @if $displayNav == mobile {
+    @media(min-width: 320px) and (max-width: 700px){@content;}
+  }
+  @else if $displayNav == tablet {
+    @media (min-width: 701px) and (max-width: 1159px){@content;}
+  }
+
+}
+
+

@@ -2,18 +2,30 @@
 #results {
   margin: $margin;
   width: 75%;
-   p {
+  @include nav(mobile){
+    width: 95%;
+  }
+  @include nav(tablet){
+    width: 95%;
+  }
+   h3 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     color: $font-color;
     font-family: $font;
     font-size: $font-size;
+     @include nav(mobile){
+       font-size: 0.5rem;
+     }
   }
 }
 
 img {
   height: 20rem;
   width: 100%;
+  @include nav(mobile){
+    height: 7rem;
+  }
 }
 
 //list of comics from API
@@ -21,6 +33,12 @@ img {
   @include content(flex, flex-start, 95%, 0, none);
   flex-wrap: wrap;
   margin: $margin;
+  border: 1px solid yellow;
+
+  li{
+    margin: .8rem;
+
+  }
 }
 
 
@@ -28,6 +46,10 @@ div {
   clear: both;
   margin: $margin;
   width: 25%;
+  @include nav(mobile){
+    width: 60%;
+
+  }
 
   p{
     margin: 0;
@@ -37,6 +59,21 @@ div {
 nav {
 overflow: auto;
 
+
+  input {
+    display: none;
+
+  }
+
+  label {
+    display: none;
+    @include nav(mobile){
+      float: right;
+      display: block;
+      margin: 0 5% 0 0;
+    }
+    };
+
   ul {
     @include content(flex, flex-end, 20%, 0.5rem, none);
     margin-right: 1rem;
@@ -45,11 +82,25 @@ overflow: auto;
     justify-content: space-between;
     float: right;
 
+    @include nav(mobile) {
+      display: none;
+      font-size: 0.7rem;
+    }
+    @include nav(tablet){
+      font-size: 0.8rem;
+    }
+
     a {
       text-decoration: none;
     }
 
   }
 
+}
+
+#toggle:checked + #links {
+  @include nav(mobile){
+  display: block;
+  }
 }
 
