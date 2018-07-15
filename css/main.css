@@ -19,6 +19,10 @@
     background-color: lightgray;
     box-sizing: border-box;
     border: none; }
+    @media (min-width: 320px) and (max-width: 700px) {
+      #search input {
+        font-size: 0.7rem;
+        background-size: .8rem; } }
 
 #searchLabel {
   display: inline-block;
@@ -29,6 +33,10 @@
   color: black;
   font-family: "Arial Rounded MT Bold", Arial, serif;
   font-size: 0.875rem; }
+  @media (min-width: 320px) and (max-width: 700px) {
+    #searchLabel {
+      font-size: 0.7rem;
+      margin-top: 10%; } }
 
 #searchButton {
   font-size: 1rem;
@@ -46,16 +54,28 @@
 #results {
   margin: 0 auto;
   width: 75%; }
-  #results p {
+  @media (min-width: 320px) and (max-width: 700px) {
+    #results {
+      width: 95%; } }
+  @media (min-width: 701px) and (max-width: 1159px) {
+    #results {
+      width: 95%; } }
+  #results h3 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     color: black;
     font-family: "Arial Rounded MT Bold", Arial, serif;
     font-size: 14px; }
+    @media (min-width: 320px) and (max-width: 700px) {
+      #results h3 {
+        font-size: 0.5rem; } }
 
 img {
   height: 20rem;
   width: 100%; }
+  @media (min-width: 320px) and (max-width: 700px) {
+    img {
+      height: 7rem; } }
 
 #comicList {
   display: flex;
@@ -64,17 +84,32 @@ img {
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border: 1px solid yellow; }
+  #comicList li {
+    margin: .8rem; }
 
 div {
   clear: both;
   margin: 0 auto;
   width: 25%; }
+  @media (min-width: 320px) and (max-width: 700px) {
+    div {
+      width: 60%; } }
   div p {
     margin: 0; }
 
 nav {
   overflow: auto; }
+  nav input {
+    display: none; }
+  nav label {
+    display: none; }
+    @media (min-width: 320px) and (max-width: 700px) {
+      nav label {
+        float: right;
+        display: block;
+        margin: 0 5% 0 0; } }
   nav ul {
     display: flex;
     align-content: flex-end;
@@ -86,8 +121,19 @@ nav {
     background: rgba(0, 0, 0, 0.7);
     justify-content: space-between;
     float: right; }
+    @media (min-width: 320px) and (max-width: 700px) {
+      nav ul {
+        display: none;
+        font-size: 0.7rem; } }
+    @media (min-width: 701px) and (max-width: 1159px) {
+      nav ul {
+        font-size: 0.8rem; } }
     nav ul a {
       text-decoration: none; }
+
+@media (min-width: 320px) and (max-width: 700px) {
+  #toggle:checked + #links {
+    display: block; } }
 
 body {
   background-color: #e23636;
@@ -101,13 +147,23 @@ body {
   background: gold;
   height: 25rem;
   margin: 1rem; }
+  @media (min-width: 320px) and (max-width: 700px) {
+    .comicItem {
+      height: 15rem;
+      width: 25%; } }
 
 header {
   background: url("../search-assets/header.png") no-repeat;
   background-size: 100%;
-  height: 55rem;
   overflow: auto;
-  transition: linear 1s 1s; }
+  transition: linear 1s 1s;
+  height: 35rem; }
+  @media (min-width: 320px) and (max-width: 700px) {
+    header {
+      height: 13rem; } }
+  @media (min-width: 701px) and (max-width: 1159px) {
+    header {
+      height: 20rem; } }
 
 #logo {
   background: url("../search-assets/marvel_logo.jpg") no-repeat;
@@ -116,6 +172,9 @@ header {
   background-size: 100%;
   width: 10%;
   margin: 1%; }
+  @media (min-width: 320px) and (max-width: 700px) {
+    #logo {
+      width: 20%; } }
 
 footer {
   background: black;

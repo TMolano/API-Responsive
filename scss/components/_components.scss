@@ -1,7 +1,6 @@
 #search {
   width: 100%;
   height: 100%;
-
   input {
     font-size: 1.5rem;
     width: 100%;
@@ -10,8 +9,13 @@
     background-color: lightgray;
     box-sizing: border-box;
     border: none;
+    @include nav(mobile){
+      font-size: 0.7rem;
+      background-size: .8rem
+    }
   }
 }
+
 
 #searchLabel {
   display: inline-block;
@@ -22,6 +26,10 @@
   color: $font-color;
   font-family: $font;
   font-size: 0.875rem;
+  @include nav(mobile){
+    font-size: 0.7rem;
+    margin-top: 10%;
+  }
 }
 
 #searchButton {

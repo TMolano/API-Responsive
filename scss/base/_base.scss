@@ -14,14 +14,24 @@ body {
   background: gold;
   height: 25rem;
   margin: 1rem;
+  @include nav(mobile){
+    height: 15rem;
+    width: 25%;
+  }
 }
 
 header {
   background: url("../search-assets/header.png") no-repeat;
   background-size: 100%;
-  height: 55rem;
   overflow: auto;
   transition: linear 1s 1s;
+  height: 35rem;
+  @include nav(mobile){
+    height: 13rem;
+  }
+  @include nav(tablet){
+    height: 20rem;
+  }
 }
 
 #logo {
@@ -31,6 +41,10 @@ header {
   background-size: 100%;
   width: 10%;
   margin: 1%;
+
+  @include nav(mobile){
+    width: 20%;
+  }
 
 }
 

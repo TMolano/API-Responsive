@@ -63,8 +63,7 @@ function searchQuery() {
                 let body = document.getElementById("body");
                 body.style.overflowY = "visible";
 
-                let header = document.getElementById("header");
-                header.style.height = "25rem";
+
 
             }
 
