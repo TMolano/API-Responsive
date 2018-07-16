@@ -1,12 +1,14 @@
+//API information
 const key = "57acb95e5d18bf2ef168007fd66dd5ce";
 const api_endpoint = "https://gateway.marvel.com/v1/public/comics";
 
+//Local Storage
 if(!localStorage.getItem('searchValue')) {
     populateStorage();
 } else {
     setStyles();
 }
-
+//Loads previous data from storage
 function setStyles() {
     const searchInput = localStorage.getItem('searchValue');
 
@@ -14,7 +16,7 @@ function setStyles() {
     searchQuery();
 
 }
-
+//Add new style to local storage
 function populateStorage() {
     localStorage.setItem('searchValue', document.getElementById('searchbar').value);
     setStyles();
@@ -37,6 +39,7 @@ function searchQuery() {
             let newContent = "";
             console.log(resultsJSON.data.results);
 
+            //If more than 20 results
             if (resultsJSON.data.results.length > 20) {
                 load.style.display = "block";
                 for (let i = 0; i < 20; i++) {
@@ -44,6 +47,8 @@ function searchQuery() {
                     newContent += '<h3>' + resultsJSON.data.results[i].title + '</h3></article></li>';
                 }
             }
+
+            //Between 1-20 results
             else if (resultsJSON.data.results.length <= 20 && resultsJSON.data.results.length > 0) {
                 load.style.display = "none";
                 for (let i = 0; i < resultsJSON.data.results.length; i++) {
@@ -89,6 +94,7 @@ function searchQuery() {
             alert("Items not available, try again")
         });
 }
+//Event when Form is submitted
     const form = document.getElementById("search-form");
     form.onsubmit = function (ev) {
         ev.preventDefault();

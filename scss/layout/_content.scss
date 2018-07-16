@@ -1,13 +1,8 @@
 //container for comicList
 #results {
   margin: $margin;
-  width: 75%;
-  @include nav(mobile){
-    width: 95%;
-  }
-  @include nav(tablet){
-    width: 95%;
-  }
+  width: 90%;
+
    h3 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -16,15 +11,21 @@
     font-size: $font-size;
      @include nav(mobile){
        font-size: 0.5rem;
+       padding-left: 0.3rem;
+       padding-right: 0.3rem;
      }
   }
 }
 
-img {
-  height: 20rem;
-  width: 100%;
+//Each list item in comicList ul
+.comicItem {
+  width: 30%;
+  background: gold;
+  height: 25rem;
+  margin: 1rem;
   @include nav(mobile){
-    height: 7rem;
+    height: 15rem;
+    width: 25%;
   }
 }
 
@@ -33,67 +34,24 @@ img {
   @include content(flex, flex-start, 95%, 0, none);
   flex-wrap: wrap;
   margin: $margin;
-  border: 1px solid yellow;
 
-  li{
-    margin: .8rem;
-
+  @include nav(mobile) {
+    li {
+      margin: 0.5rem;
+    }
   }
 }
 
+#logo {
+  background: url("../search-assets/marvel_logo.jpg") no-repeat;
+  height: 5rem;
+  float: left;
+  background-size: 100%;
+  width: 10%;
+  margin: 1%;
 
-div {
-  clear: both;
-  margin: $margin;
-  width: 25%;
   @include nav(mobile){
-    width: 60%;
-
-  }
-
-  p{
-    margin: 0;
-  }
-}
-
-nav {
-overflow: auto;
-
-
-  input {
-    display: none;
-
-  }
-
-  label {
-    display: none;
-    @include nav(mobile){
-      float: right;
-      display: block;
-      margin: 0 5% 0 0;
-    }
-    };
-
-  ul {
-    @include content(flex, flex-end, 20%, 0.5rem, none);
-    margin-right: 1rem;
-    font-family: $font;
-    background: rgba(0, 0, 0, 0.7);
-    justify-content: space-between;
-    float: right;
-
-    @include nav(mobile) {
-      display: none;
-      font-size: 0.7rem;
-    }
-    @include nav(tablet){
-      font-size: 0.8rem;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
+    width: 20%;
   }
 
 }
