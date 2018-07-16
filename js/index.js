@@ -91,7 +91,7 @@ function searchQuery() {
 
         .catch(error => {
             console.log("An Error Occurred:", error);
-            alert("Items not available, try again")
+            
         });
 }
 //Event when Form is submitted
