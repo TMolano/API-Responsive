@@ -16,7 +16,6 @@
   }
 }
 
-
 #searchLabel {
   display: inline-block;
   box-sizing: border-box;
@@ -37,6 +36,10 @@
   font-size: 1rem;
   margin-top: 1rem;
   transition: ease-in 0.50s;
+
+  @include nav(mobile){
+    font-size: 0.7rem;
+  }
 
 
   &:hover {
