@@ -10,23 +10,28 @@ if(!localStorage.getItem('searchValue')) {
 }
 //Loads previous data from storage
 function setStyles() {
+
     const searchInput = localStorage.getItem('searchValue');
 
     document.getElementById('searchbar').value = searchInput;
-    searchQuery();
+
+        searchQuery();
 
 }
 //Add new style to local storage
 function populateStorage() {
+
     localStorage.setItem('searchValue', document.getElementById('searchbar').value);
-    setStyles();
+    if(document.getElementById('searchbar').length > 0)
+    {
+        setStyles();
+    }
 }
 
 
 //Fetch API data
 //Filter Comics based off Search Input
 function searchQuery() {
-
     const filterValue = document.getElementById("searchbar").value.toUpperCase();
     const inputValue = document.getElementById("searchbar").value;
     const url = `${api_endpoint}?titleStartsWith=${filterValue}&limit=40&orderBy=issueNumber%2Ctitle&apikey=${key}`;
@@ -91,7 +96,7 @@ function searchQuery() {
 
         .catch(error => {
             console.log("An Error Occurred:", error);
-            alert("Items not available, try again")
+            
         });
 }
 //Event when Form is submitted
